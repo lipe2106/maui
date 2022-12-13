@@ -1,0 +1,1 @@
+C:\Users\Lina\source\repos\maui_calculator\maui_calculator\maui_calculator.csproj;x64

@@ -32,76 +32,77 @@
             <Grid
                 HorizontalOptions="Center"
                 ColumnSpacing="2"
-                Margin="20,0,20,20">
+                Margin="200,0,20,20">
                 <Grid.RowDefinitions>
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40"/>
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="40" />
-                    </Grid.ColumnDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
                 
-                    <Entry 
-                        x:Name="No1"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        Grid.Row="0"
-                        WidthRequest="80"
-                        Placeholder="Siffra..."
-                        VerticalOptions="Center"
-                        Keyboard="Numeric" />
+                <Entry 
+                    x:Name="No1"
+                    Grid.Column="0"
+                    WidthRequest="80"
+                    Placeholder="Siffra..."
+                    VerticalTextAlignment="Center"
+                    Keyboard="Numeric"
+                    HeightRequest="35"/>
 
-                    <Picker     
-                        x:Name="Select"
-                        Grid.Column="2"
-                        Grid.ColumnSpan="2"
-                        VerticalOptions="Center">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>+</x:String>
-                                <x:String>-</x:String>
-                                <x:String>*</x:String>
-                                <x:String>/</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
+                <Picker     
+                    x:Name="Select"
+                    Grid.Column="1"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="80"
+                    HeightRequest="35">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>+</x:String>
+                            <x:String>-</x:String>
+                            <x:String>*</x:String>
+                            <x:String>/</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
 
-                    <Entry 
-                        x:Name="No2"
-                        Grid.Column="4"
-                        Grid.ColumnSpan="2"
-                        Grid.Row="0"
-                        WidthRequest="80"
-                        Placeholder="Siffra..."
-                        VerticalOptions="Center"
-                        Keyboard="Numeric" />
+                <Entry 
+                    x:Name="No2"
+                    Grid.Column="2"
+                    WidthRequest="80"
+                    Placeholder="Siffra..."
+                    VerticalOptions="Center"
+                    Keyboard="Numeric"
+                    HeightRequest="35" />
 
-                    <Button 
-                        x:Name="Equal"
-                        Text="="
-                        Grid.Column="6"
-                        Grid.ColumnSpan="2"
-                        VerticalOptions="Center"
-                        Clicked="Calculate"/>
+                <Button 
+                    x:Name="Equal"
+                    Text="="
+                    Grid.Column="3"
+                    VerticalOptions="Center"
+                    Clicked="Calculate"
+                    HeightRequest="35" />
 
-                    <Label
-                        x:Name="Result"
-                        Grid.Column="8"
-                        Grid.ColumnSpan="3"
-                        SemanticProperties.HeadingLevel="Level3"
-                        FontSize="16"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center" />
-                </Grid>
+                <Label
+                    x:Name="Result"
+                    Grid.Column="4"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    VerticalTextAlignment="Center"
+                    HeightRequest="35"/>
+
+                <Label 
+                    x:Name="Error"
+                    Grid.Column="5"
+                    VerticalTextAlignment="Center"
+                    HeightRequest="35" 
+                    WidthRequest="150"
+                    TextColor="PaleVioletRed"/>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 
